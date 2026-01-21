@@ -13,7 +13,7 @@ client = Groq()
 
 # 3. Page Configuration
 st.set_page_config(page_title="My Chatbot", page_icon="🤖")
-st.title("🤖 My Last Minute Chatbot")
+st.title("*-* Son Goku Chat *-*")
 
 ###############################################################
 #########################  BLOCK 2 ############################
@@ -73,4 +73,5 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": response})
 
     except Exception as e:
+
         st.error(f"Error: {e}")
