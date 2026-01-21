@@ -76,3 +76,17 @@ if prompt := st.chat_input("What is up?"):
 
         st.error(f"Error: {e}")
 
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/", methods=["GET", "POST"])
+def home():
+    reply = ""
+    if request.method == "POST":
+        msg = request.form["message"]
+        reply = "Hello, I am your chatbot"
+    return render_template("index.html", reply=reply)
+
+app.run(debug=True)
+
