@@ -12,7 +12,7 @@ groq_api_key = os.getenv("GROQ_API_KEY")
 client = Groq()
 
 # 3. Page Configuration
-st.set_page_config(page_title="My Chatbot", page_icon="🤖")
+st.set_page_config(page_title="*-* Son Goku Chat *-*", page_icon="🤖")
 st.title("*-* Son Goku Chat *-*")
 
 ###############################################################
@@ -75,3 +75,4 @@ if prompt := st.chat_input("What is up?"):
     except Exception as e:
 
         st.error(f"Error: {e}")
+
